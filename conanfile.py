@@ -9,30 +9,20 @@ class GreatestConan(ConanFile):
     name = "greatest"
     version = "1.3.1"
     url = "https://github.com/bincrafters/conan-greatest"
-    description = "A C testing library in 1 file. No dependencies, no dynamic allocation. ISC licensed."
-    
-    # Indicates License type of the packaged library
+    description = "A C testing library in 1 file. No dependencies, no dynamic allocation. "
     license = "ISC"
-    
-    # Packages the license for the conanfile.py
     exports = ["LICENSE.md"]
-    
-    # Custom attributes for Bincrafters recipe conventions
     source_subfolder = "source_subfolder"
     
     def source(self):
         source_url = "https://github.com/silentbicycle/greatest"
         tools.get("{0}/archive/v{1}.tar.gz".format(source_url, self.version))
         extracted_dir = self.name + "-" + self.version
-
-        #Rename to "source_folder" is a convention to simplify later steps
         os.rename(extracted_dir, self.source_subfolder)
 
-
     def package(self):
-        include_folder = self.source_subfolder
-        self.copy(pattern="LICENSE")
-        self.copy(pattern="greatest.h", dst="include", src=include_folder)
+        self.copy(pattern="LICENSE", dst="licenses")
+        self.copy(pattern="greatest.h", dst="include", src=self.source_subfolder)
 
     def package_id(self):
         self.info.header_only()
