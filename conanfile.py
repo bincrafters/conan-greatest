@@ -7,7 +7,7 @@ import os
 
 class GreatestConan(ConanFile):
     name = "greatest"
-    version = "1.3.1"
+    version = "1.4.0"
     url = "https://github.com/bincrafters/conan-greatest"
     homepage = "https://github.com/silentbicycle/greatest"
     author = "Bincrafters <bincrafters@gmail.com>"
@@ -15,7 +15,7 @@ class GreatestConan(ConanFile):
     license = "ISC"
     exports = ["LICENSE.md"]
     source_subfolder = "source_subfolder"
-    no_copy_source=True
+    no_copy_source = True
 
     def source(self):
         tools.get("{0}/archive/v{1}.tar.gz".format(self.homepage, self.version))
