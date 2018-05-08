@@ -15,7 +15,7 @@ class GreatestConan(ConanFile):
     license = "ISC"
     exports = ["LICENSE.md"]
     source_subfolder = "source_subfolder"
-    no_copy_source=True
+    no_copy_source = True
 
     def source(self):
         tools.get("{0}/archive/v{1}.tar.gz".format(self.homepage, self.version))
