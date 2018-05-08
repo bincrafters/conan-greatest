@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from cpt.packager import ConanMultiPackager
+from bincrafters import build_template_default
+
 
 if __name__ == "__main__":
-    builder = ConanMultiPackager()
+    builder = build_template_default.get_builder()
     builder.run()
