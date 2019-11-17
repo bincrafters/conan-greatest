@@ -7,7 +7,6 @@ class GreatestConan(ConanFile):
     version = "1.4.1"
     url = "https://github.com/bincrafters/conan-greatest"
     homepage = "https://github.com/silentbicycle/greatest"
-    author = "Bincrafters <bincrafters@gmail.com>"
     description = "A C testing library in 1 file. No dependencies, no dynamic allocation. "
     license = "ISC"
     exports = ["LICENSE.md"]
