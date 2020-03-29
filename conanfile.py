@@ -9,7 +9,6 @@ class GreatestConan(ConanFile):
     homepage = "https://github.com/silentbicycle/greatest"
     description = "A C testing library in 1 file. No dependencies, no dynamic allocation. "
     license = "ISC"
-    exports = ["LICENSE.md"]
     _source_subfolder = "source_subfolder"
     no_copy_source = True
 
